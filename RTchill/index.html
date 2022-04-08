@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Relax TRIP</title>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">RTchill</a>
+        <ul>
+            <li><a href="#" class="active">Início</a></li>
+            <li><a href="#">RELAX</a></li>
+            <li><a href="#">Playlists</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="img/stars.png" id="estrelas" alt="ilustrações de estrelas completando o fundo do site">
+        <img src="img/moon.png" id="lua" alt="ilustração da lua">
+        <img src="img/mountains_behind.png" id="mountains_behind" alt="ilustração de montanhas azuis">
+        <h2 id="text">Chill Beats</h2>
+        <a href="#sec" id="btn" onclick="window.location.href = 'https://open.spotify.com/playlist/52ZJKCtAbf0GzbwwYlWFDS?si=163295bc9f5a4530'">Experiencie a vibe</a>
+        <img src="img/mountains_front.png" id="mountains_front" alt="ilustração de desfiladeiros">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>RELAX Trip</h2>
+        <p>A música lo-fi tem a característica da leveza e da simplicidade, e por ser, em grande parte, livre de vocais, tem sido muito buscada para auxiliar a manter o foco em casa, durante o trabalho em home-office, ou mesmo para relaxar enquanto se lê um livro ou espera o sono chegar. E apesar do estilo lo-fi hip hop estar super em alta, ele não tem a agressividade, a percussividade intensa e os subgraves do hip hop tradicional, mantendo o ritmo mais lento com os chamados "beats de lo-fi". Aliás, o lo-fi hip hop, quando não tem absolutamente nenhuma parte cantada, é o que deixa o estilo ainda mais suave e relaxante. Muitas vezes, encontramos samples de monólogos ou diálogos extraídos filmes, animes ou noticiários no meio da música.<br> <br> Os ouvintes de lo-fi têm algo em comum: usam a música – um amálgama de jazz, música eletrônica e hip-hop – como pano de fundo relaxante para ler, estudar, trabalhar, dormir, meditar.  A popularidade do lo-fi ganhou um gás com o início da pandemia, quando se tornou remédio de ansiosos trancados em casa. O ator e rapper Will Smith, por exemplo, criou duas playlists no YouTube como forma de ajudar os seus seguidores a enfrentar a quarentena. Juntos, os mixes somam três horas de música – e 20 milhões de visualizações.<br><br> Qualquer música pode ser lo-fi. A expressão, originalmente, não está ligada a um único gênero, mas sim à qualidade do som. “Lo-fi” vem de low fidelity, “baixa fidelidade”. São gravações caseiras, sem o padrão-ouro cristalino de um estúdio. </p>
+    </div>
+
+    <script>
+        let estrelas = document.getElementById('estrelas');
+        let lua = document.getElementById('lua');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            estrelas.style.left = value * 0.25 + 'px';
+            lua.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value *0;5 + 'px';
+        })
+    </script>
+</body>
+</html>
